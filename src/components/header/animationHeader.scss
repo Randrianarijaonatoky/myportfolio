@@ -1,0 +1,125 @@
+@import'../../style/variable.scss';
+@keyframes point0 {
+    0%{
+        transform: translate(20%,20%);
+
+        background: linear-gradient(270deg, #f4f4f4, $rouge );
+        transition: 1s;
+    }
+    50%{
+        // background: linear-gradient(270deg, #, $noir );
+        filter: blur(5px);
+        transition: 5s;
+    }
+    100%{
+        transition: 2s;
+        background: linear-gradient(270deg, #f4f4f4, $noir );
+        filter: blur(2px);
+        
+    }
+}
+
+
+@keyframes moveRotate0 {
+    0% {
+        transform: translate(-50%, -50%) rotate(355deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translate(10px, -10px);
+    }
+}
+
+@keyframes moveUpDown1 {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+@keyframes scaleAndMove2 {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(1px);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2) translate(10px, -10px);
+        filter: blur(3px);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(2px);
+    }
+}
+
+@keyframes rotateAndSlide3 {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translate(10px, 10px);
+    }
+}
+
+
+@keyframes title1 {
+    0%{
+        transform: translateX(-100%);
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%) scale(1.5); ;
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        transition: 1s;
+        opacity: .5;
+
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

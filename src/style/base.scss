@@ -1,0 +1,72 @@
+@import './variable.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+body {
+    // background-color: black; /* Correspond à votre image de fond */
+    // position: relative;
+
+    // margin: 0;
+    // overflow: hidden;
+
+
+    // background-color: rgb(221 221 221);
+    // backdrop-filter: blur(1px);
+    // // font-family: 'ALTONE-LIGHT', sans-serif;
+    // overflow-y: scroll;
+    // // background-color: white;
+    // color: $gris;
+
+    background-color: $grise;
+    font-family: Altone;
+    // font-weight: 400;
+}
+
+body::before {
+    // content: '';
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // background-image: url('../../public/images/bgWhite.jfif');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // width: 100%;
+    // z-index: -1;
+    // filter: blur(8px);
+    // // -webkit-filter: blur(8px); /* Préfixe pour la compatibilité */
+}
+
+
+@font-face {
+    font-family: Signature;
+    src: url(../../public/font/Signature.otf);
+}
+
+@font-face {
+    font-family: monotype;
+    src: url(../../public/font/MTCORSVA.TTF);
+}
+
+@font-face {
+    font-family: freeScript;
+    src: url(../../public/font/FREESCPT.TTF);
+}

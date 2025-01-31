@@ -1,0 +1,71 @@
+@import'./variable.scss';
+
+@mixin button {
+    border-radius: 15px;
+    font-weight: 530;
+    font-size: 1rem;
+}
+
+@mixin card($radius,$padding){
+    border-radius: $radius;
+    flex: 1;
+    padding: $padding;
+}
+
+
+@mixin title {
+    
+}
+
+@mixin titleAfter {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    /* Définit la moitié du texte */
+    height: 2px;
+    /* Épaisseur de la ligne */
+    background-color: $noir;
+    /* Couleur de la ligne */
+}
+
+@mixin title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: $noir;
+    text-align: center;
+    font-weight: 600;
+    z-index: 2;
+    // color: $rouge    ;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -5px;
+    //     left: 0;
+    //     width: 50%;
+    //     /* La largeur du soulignement est fixe */
+    //     height: 5px;
+    //     background-color: $rouge;
+    //     border-radius: 5px;
+        
+    //     /* La couleur est fixe */
+    // }
+}
+
+@mixin titleBg($color){
+    font-size: 6rem;
+    color: $color;
+    opacity: 0.1;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+}

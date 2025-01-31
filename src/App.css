@@ -1,0 +1,23 @@
+@import './style/variable.scss';
+
+@font-face {
+    font-family: 'YourFontName'; /* Remplacez par le nom de votre police */
+    src: url('./font/ALTONE-LIGHT.TTF') format('TTF'),
+         url('./font/SIGNATUREXDEMOREGULAR.TTF') format('TTF');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  #tsparticles {
+       /* position: absolute; */
+       /* ou fixed selon votre besoin */
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+       /* Pour que les particules soient derrière les autres éléments */
+  }
+
+

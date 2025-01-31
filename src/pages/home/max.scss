@@ -1,0 +1,40 @@
+@media (max-width: 934px) {
+    html{
+        font-size: 80%;
+    }
+
+    .Nav{
+
+        &-listes{
+            // display: none;
+        }
+
+    }
+
+    .competances{
+        &-titleBg{
+            font-size: 5rem;
+        }
+    }
+
+    .competances{
+        &-cards{
+            flex-direction: column;
+        }
+    }
+    .apropos{
+        &-cards{
+            flex-direction: column;
+        }
+    }
+
+    .header{
+        &-figure{
+            display: none;
+        }
+    }
+
+
+    
+}
+

@@ -1,0 +1,13 @@
+.practice{
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: blue;
+}
+
+.practiceBtn{
+    padding: 1rem;
+}

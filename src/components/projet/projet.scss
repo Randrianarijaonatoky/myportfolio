@@ -1,0 +1,248 @@
+@import '../../style/variable.scss';
+@import'../../style/mixin.scss';
+
+
+
+
+.projet{
+    padding: 2rem;
+    background-color: white;
+    margin-top: 2rem;
+
+    &-head{
+        position: relative;
+        text-align: center
+    }
+
+    &-titleBg{
+        @include titleBg($noir);
+    }
+
+    &-main{
+
+        width: 80%;
+        margin: auto;
+    }
+
+
+    &-title{
+        
+        @include title;
+        text-align: center;
+    }
+ 
+
+    &-cards{
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+        &-cardImg{
+            flex: 1;
+            height: 100%;
+        }
+        
+        &-card{
+            flex: 1;
+            border-radius: 20px;
+            // overflow: hidden;
+            // text-align: center;
+            background-color: $grise;
+            padding: 1rem;
+            backdrop-filter: blur(1px);
+            position: relative;
+            overflow: hidden;
+            
+            &-img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+                position: absolute;
+                top: 0;
+                left: 0;    
+                transition: .5s;
+            }
+            &-figure{
+                aspect-ratio: 2/1;
+                border-radius: 15px;
+                overflow: hidden ;
+                position: relative;
+                
+                &-bg{
+                    transition: 1s;
+                    // background-color: red;
+                    background: linear-gradient(0deg, $rouge, rgba(255, 255, 255, 0.015));
+                    position: absolute;
+                    bottom: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 50%;
+                    opacity: .5;
+                    text-align: center;
+                    
+                    
+                    &-name{
+                        color: #f1f1f1;
+                        position: absolute;
+                        // bottom: -100%;
+                        // left: 0;
+                        
+                    }
+
+                }
+            }
+
+            
+
+
+            // &-textes{
+            //     // height: 30%;
+            //     // margin: 1rem;
+            //     padding: 3rem;
+            //     position: absolute;
+            //     bottom: -100%;
+            //     left: 0;
+            //     right: 0;
+            //     overflow: hidden;
+            //     width: 100%;
+            //     height: 0;
+            //     transition: .5s ease;
+            //     background: linear-gradient(0deg, #0915219f, rgba(0, 0, 0, 0));
+            //     // transition: opacity 300ms ease-in-out;
+            //     // text-align: end;
+                
+            //     &-language{
+            //         transform: translateY(-2.5rem);
+            //         width: 60px;
+            //         height: 60px;
+            //         border-radius: 50%;
+            //         object-fit: cover;
+            //     }
+            //     &-title{
+            //         color: white;
+            //         margin: .2rem;
+            //         font-weight: 500;
+            //         text-transform: uppercase;
+            //     }
+
+            //     &-para{
+            //         color: $orange;
+            //         font-size: 1.3rem;
+            //     }
+
+            //     &-date{
+            //         color: white;
+            //     }
+            // }
+
+            &-textes{
+                color: $noir;
+                margin-top: 1rem;
+                // height: 100%;
+                &-para{
+                    font-size: 1.5rem;
+                    font-family: freeScript;
+                }
+                
+                &-title{
+                    color: $rouge;
+                    font-size: 1.5rem;
+
+                }
+
+                &-date{
+                    text-align: end;
+                    float: right;
+                    margin-top: .5rem;
+                    position: absolute;
+                    right: .5rem;
+                    bottom: 1rem;
+                    transition: .5s;
+                }
+
+                &-detail{
+                    margin: .5rem 0 2rem 0;
+                    height: 100px;
+                    padding: .5rem 0;
+                    overflow: hidden scroll;
+                }
+                &-detail::-webkit-scrollbar {
+                    width: 8px;
+                    /* Largeur de la scrollbar */
+                }
+
+                &-detail::-webkit-scrollbar-thumb {
+                    background-color: $noir;
+                    /* Couleur du bouton */
+                    border-radius: 10px;
+                    /* Coins arrondis */
+                    border: 2px solid #f1f1f1;
+                    /* Espace autour du bouton */
+                }
+            }
+
+            &-dots{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+                position: absolute;
+                z-index: -1;
+                left: 1.5rem;
+                bottom: 0rem;
+                transform: rotate(-90deg);
+                overflow: hidden;
+                transition: .5s;
+
+                &-dot{
+                    width: 100%;
+                    color: $noir;
+                    opacity: .1;
+                    font-size: .5rem;
+
+                }
+            }
+        }
+
+        // &-card:hover{
+        //     background-color: $rouge;
+        //     transition: .5s;
+        // }
+
+
+
+        &-card:hover &-card-textes{
+            height: 50%;
+            bottom: 0;
+        }
+        &-card:hover &-card-textes-date{
+            color: $rouge;
+            transition: .5s;
+        }
+
+        &-card:hover &-card-img{
+            filter: brightness(.8);
+            transition: .5s;
+        }
+        &-card:hover &-card-figure-bg{
+            // filter: brightness(.8);
+            bottom: 0;
+            transition: .5s;
+        }
+        &-card:hover &-card-figure-bg-name{
+            // filter: brightness(.8);
+            bottom: 1rem;
+            transition: .5s;
+            // text-align: center;
+            left: 50%;
+            // width: 100%;
+            opacity: 1 !important;
+        }
+
+        &-card:hover &-card-dots-dot{
+            color: $rouge;
+            transition: 1s;
+            opacity: .3;
+        }
+    }
+}

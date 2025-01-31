@@ -1,0 +1,129 @@
+@import'../../style/variable.scss';
+@import'../../style/mixin.scss';
+
+.competances{
+
+    // background-color: rgba(255, 255, 255, 0.837);
+    // background-color: $gris;
+    position: relative;
+    padding: 2rem;
+
+    &-contenair{
+        width: 80%;
+        margin: 2rem auto;
+
+    }
+
+    &-head{
+        text-align: center;
+        position: relative;
+
+    }
+
+    &-titleBg{
+        @include titleBg($gris);
+    }
+    &-title{
+        @include title;
+    }
+
+    &-cards{
+        display: flex;
+        gap: 2rem;
+        margin-top: 1.5rem;
+
+        &-front{
+            flex: 1;
+            &-card{
+                margin-top: 1rem;
+
+                &-head{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                &-title{
+                    color: $noir;
+                    transform: upercase;
+                }
+
+                &-contenair{
+                    background-color: white;
+                    // width: 100%;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    margin-top: 1rem;
+                    // border: 1px solid white;
+                    
+                    &-progress{
+                        // width: 20%;
+                        border-radius: 15px;
+                        background-color: $rouge;
+                        padding: .2rem 0;
+                    }
+                }
+            }
+        }
+
+        &-about{
+            flex: 1;
+
+            display: flex;
+            gap: 1rem;
+
+            &-content1{
+                flex: 1;
+                &-card{
+                    background-color: white ;
+                    border-radius: 15px;
+                    padding: 1rem;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 1rem;
+                    transform: scale(.9);
+
+                    &-icon{
+                        font-size: 1rem;
+                        // background-color: $rouge;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        padding: .5rem;
+                    }
+                    
+                    &-title{
+                        color: $rouge;
+                        font-size: 1.5rem;
+                        margin-top: .5rem;
+                    }
+                    
+                }
+                &-card:hover{
+                    box-shadow: 2px 4px 12px -3px;
+                    transition: 1s;
+                    transform: scale(1);
+                }
+                // &-card:hover &-card-icon{
+                //     background-color: $rouge;
+                //     transition: .5s;
+                // }
+                &-card:hover &-card-title{
+                    color: $rouge;
+                    transition: .5s;
+                    
+                }
+
+            }
+
+            &-content1:nth-child(2){
+                transform: translateY(2rem) ;
+                
+            }
+
+
+            
+        }
+    }
+}
+
+

@@ -1,0 +1,72 @@
+@import'../../style/variable.scss';
+
+.footer{
+    
+    padding: 1rem 0;
+    &-title{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 250;
+    }
+
+    &-foot{
+        font-size: 1rem;
+        font-weight: 250;
+        color: $noir;
+        text-align: center;
+        margin-top: 2rem;
+
+        &-value{
+            color: $rouge;
+        }
+    }
+
+    &-main{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+
+        &-links{
+            display: flex;
+            gap: 1rem;
+
+            &-link{
+                color: $noir;
+                font-size: 1.2rem;
+            }
+
+        }
+        
+
+        &-contact{
+            display: flex;
+            gap: 1rem;
+
+
+            &-link{
+                color: white !important;
+                border-radius: 50%;
+                background-color: $noir;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                &-icon{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                }
+
+                &:hover{
+                    transform: translateY(-5px);
+                    transition: .5s;
+                    background-color: $rouge;
+                    color: $grise;
+                }
+            }
+
+        }
+    }
+}
